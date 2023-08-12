@@ -1,0 +1,3 @@
+baseURL = 'http://rrh.mersh.com/'
+title = 'Red Right Hand Wiki'
+contentDir = 'content/'

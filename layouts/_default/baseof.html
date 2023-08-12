@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    <meta name="author" content="{{ .Site.Params.Author}}">
+    <meta name="color-scheme" content="only light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link href="/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        {{ block "header" . }}
+          <h1>{{ .Title }}</h1>
+        {{ end }}
+      </header>
+      <main>
+        {{ block "main" . }} {{ end }}
+      </main>
+      <hr />
+      <footer>
+        {{ block "footer" . }}
+          <p>The content for this site is <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
+        {{ end }}
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{{ define "main" }}
+    <section>
+        <h2>Minecraft</h2>
+        <section>
+            <h3>Locations</h3>
+            <ul>
+                {{ range (where .Site.RegularPages "Section" "locations") }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </section>
+        <section>
+            <h3>Nations</h3>
+            <ul>
+                {{ range (where .Site.RegularPages "Section" "nations") }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </section>
+        <section>
+            <h3>Players</h3>
+            <ul>
+                {{ range (where .Site.RegularPages "Section" "players") }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </section>
+    </section>
+{{ end }}
